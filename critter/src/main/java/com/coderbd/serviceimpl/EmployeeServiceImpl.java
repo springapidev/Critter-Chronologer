@@ -3,20 +3,17 @@ package com.coderbd.serviceimpl;
 import com.coderbd.dto.EmployeeDTO;
 import com.coderbd.dto.EmployeeRequestDTO;
 import com.coderbd.entity.Employee;
-import com.coderbd.enums.EmployeeSkill;
 import com.coderbd.repository.EmployeeRepository;
 import com.coderbd.service.EmployeeService;
-import lombok.val;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
+
+@Transactional
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired

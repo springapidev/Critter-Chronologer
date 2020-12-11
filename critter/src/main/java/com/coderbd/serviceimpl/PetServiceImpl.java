@@ -7,14 +7,16 @@ import com.coderbd.entity.Pet;
 import com.coderbd.repository.PetRepository;
 import com.coderbd.service.CustomerService;
 import com.coderbd.service.PetService;
-import org.springframework.beans.BeanUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Transactional
 @Service
 public class PetServiceImpl implements PetService {
     @Autowired
